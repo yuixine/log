@@ -3,20 +3,11 @@ import requests
 import base64
 from huggingface_hub import login, HfApi
 
-# Step 1: Fetch repo name from Pastebin
-pastebin_raw_url = "https://pastebin.com/raw/1CS3UarS"
-response = requests.get(pastebin_raw_url)
-
-if response.status_code != 200:
-    raise Exception("Failed to fetch Pastebin content")
-
-repo_name = response.text.strip()
-if not repo_name:
-    raise ValueError("Pastebin content is empty. Expected a repo name.")
-
+repo_name = "nothellokitty" 
 # Step 2: Decode Hugging Face token (Base64)
 encoded_token = "aGZfYUhibGtweG5kYU9mb0tSbElYSEFaenlhYnllZlFUdFNSYgo=" 
 write_token = base64.b64decode(encoded_token).decode()
+write_token = write_token.replace('\n', '')
 
 # Step 3: Login
 login(write_token, add_to_git_credential=True)

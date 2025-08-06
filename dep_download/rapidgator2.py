@@ -7,7 +7,7 @@ import os
 login_email = 'laygyi.4455@proton.me'
 password = 'kk123456'
 two_factor_code = ''  # Leave blank if 2FA not enabled
-pastebin_link = "https://pastebin.com/raw/0qJRbwfP?nocache=1"
+pastebin_link = "https://gist.githubusercontent.com/yuixine/5e8f30a1c4329f5ee6018edac42ce58e/raw/rgdl2.txt"
 output_path = 'download'
 
 # === UTILS ===
